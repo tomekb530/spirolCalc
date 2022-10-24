@@ -18,10 +18,10 @@
                 <Label x:Name="WielkoscNaczyniaLabel" Content="Wielkość naczynia w ml.:" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12" Height="30" Width="159"/>
                 <TextBox x:Name="WielkoscNaczyniaTextBox" HorizontalAlignment="Center" Margin="0,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Height="21" FontSize="11"/>
                 <Label x:Name="ZawartoscSpirytusuLabel" Content="% spirytusu:" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,48,0,0" VerticalAlignment="Top" FontSize="12" Height="30" Width="159"/>
-                <TextBox x:Name="ZawartoscSpirytusuTextBox" HorizontalAlignment="Center" Margin="0,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Height="21" FontSize="11"/>
+                <TextBox x:Name="ZawartoscSpirytusuTextBox" HorizontalAlignment="Center" Margin="0,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Height="21" FontSize="11" TextChanged="ZawartoscSpirytusuTextBox_TextChanged"/>
                 <Label x:Name="IloscNaczynLabel" Content="Ilość naczyń:" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,96,0,0" VerticalAlignment="Top" FontSize="12" Height="30" Width="159"/>
                 <TextBox x:Name="IloscNaczynTextBox" HorizontalAlignment="Center" Margin="0,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" Height="21" FontSize="11"/>
-                <Button x:Name="obliczButton" Content="Oblicz" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,157,0,0" Width="72" FontSize="10" Height="20" VerticalAlignment="Top"/>
+                <Button x:Name="obliczButton" Content="Oblicz" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,157,0,0" Width="72" FontSize="10" Height="20" VerticalAlignment="Top" Click="obliczButton_Click"/>
             </Grid>
         </GroupBox>
 
@@ -31,8 +31,9 @@
                 <Label x:Name="PresetNaczynLabel" Content="Typowe naczynia:" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontSize="12" Width="159" Height="30" VerticalAlignment="Top" Margin="0,-5,0,0"/>
                 <ComboBox x:Name="spirolePresety" HorizontalAlignment="Center" Width="120" Height="22" VerticalAlignment="Top" Margin="0,69,0,0"/>
                 <Label x:Name="PresetSpiroliLabel" Content="Typowe napoje:" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontSize="12" Width="159" Margin="0,44,0,0" Height="30" VerticalAlignment="Top"/>
-                <Button x:Name="dodajPresetyButton" Content="Użyj" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,102,0,0" Width="72" FontSize="10" Height="20" VerticalAlignment="Top" Cursor="Hand"/>
+                <Button x:Name="dodajPresetyButton" Content="Użyj" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,102,0,0" Width="72" FontSize="10" Height="20" VerticalAlignment="Top" Cursor="Hand" Click="dodajPresetyButton_Click"/>
             </Grid>
         </GroupBox>
+        <Label x:Name="jakisLabel" Content="Label" HorizontalAlignment="Left" Margin="501,222,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

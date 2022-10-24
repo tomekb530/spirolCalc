@@ -41,5 +41,27 @@ namespace spirolCalc
             Utensil choosen = (Utensil)naczyniaPresety.SelectedItem;
             spirolePresety.ItemsSource = calc.GetExampleAlcohols(choosen.ToString());
         }
+
+        private void dodajPresetyButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (naczyniaPresety.SelectedIndex != -1 && spirolePresety.SelectedIndex != -1)
+            {
+                Alcohol choosenAlcohol = (Alcohol)spirolePresety.SelectedItem;
+                Utensil choosenUtensil = (Utensil)naczyniaPresety.SelectedItem;
+                WielkoscNaczyniaTextBox.Text = choosenUtensil.Size.ToString();
+                ZawartoscSpirytusuTextBox.Text = choosenAlcohol.ABV.ToString();
+
+            }
+        }
+
+        private void ZawartoscSpirytusuTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void obliczButton_Click(object sender, RoutedEventArgs e)
+        {
+            jakisLabel.Content = calc.Calculate(Convert.ToDouble(WielkoscNaczyniaTextBox.Text),Convert.ToDouble(ZawartoscSpirytusuTextBox.Text), Convert.ToDouble(IloscNaczynTextBox.Text)).ToString() + "ml";
+        }
     }
 }

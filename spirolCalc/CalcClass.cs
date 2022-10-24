@@ -73,9 +73,9 @@ namespace spirolCalc
         {
             return data.Alcohols.Where(x => x.PrefferedUtensil == name).ToList();
         }
-        public double Calculate(double amount, double ABV, double size)
+        public double Calculate(double size, double ABV, double amount)
         {
-            return (amount * ABV);
+            return (size * ABV) / 100 * amount;
         }
     }
 }
