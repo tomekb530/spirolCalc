@@ -3,13 +3,57 @@
     {
       "Name": "Kieliszek",
       "Size": 30
+    },
+    {
+      "Name": "Małpka",
+      "Size": 100
+    },
+    {
+      "Name": "Szklanka",
+      "Size": 150
+    },
+    {
+      "Name": "Duża Szklanka",
+      "Size": 250
+    },
+    {
+      "Name": "Lampka",
+      "Size": 250
+    },
+    {
+      "Name": "Kufel",
+      "Size": 500
+    },
+    {
+      "Name": "Butelka",
+      "Size": 1000
     }
   ],
   "Alcohols": [
     {
       "Name": "Wódka",
       "ABV": 40,
-      "PrefferedUtensil": "Kieliszek"
+      "PrefferedUtensil": [ "Kieliszek", "Małpka" ]
+    },
+    {
+      "Name": "Piwo",
+      "ABV": 5,
+      "PrefferedUtensil": [ "Kufel", "Szklanka", "Duża Szklanka" ]
+    },
+    {
+      "Name": "Drink",
+      "ABV": 20,
+      "PrefferedUtensil": [ "Szklanka", "Duża Szklanka", "Kieliszek" ]
+    },
+    {
+      "Name": "Spirytus",
+      "ABV": 99,
+      "PrefferedUtensil": [ "Kieliszek", "Małpka", "Szklanka", "Duża Szklanka", "Kufel", "Butelka" ]
+    },
+    {
+      "Name": "Wino",
+      "ABV": 12,
+      "PrefferedUtensil": [ "Szklanka", "Duża Szklanka", "Lampka", "Butelka" ]
     }
   ]
 }

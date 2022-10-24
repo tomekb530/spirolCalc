@@ -32,7 +32,7 @@ namespace spirolCalc
 
         public double ABV { get; set; }
 
-        public string PrefferedUtensil { get; set; }
+        public List<string> PrefferedUtensil { get; set; }
 
         public override string ToString()
         {
@@ -71,7 +71,7 @@ namespace spirolCalc
 
         public List<Alcohol> GetExampleAlcohols(string name)
         {
-            return data.Alcohols.Where(x => x.PrefferedUtensil == name).ToList();
+            return data.Alcohols.Where(x => x.PrefferedUtensil.Contains(name)).ToList();
         }
         public static double Calculate(double size, double ABV, double amount)
         {

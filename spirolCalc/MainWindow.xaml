@@ -37,9 +37,9 @@
         <GroupBox Name="WynikiBox" Header="Wyniki" Margin="233,10,10,10" >
             <Grid>
                 <Label x:Name="objetoscSpirolaLabel"  Content="Objętość czystego spirytusu:" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,123,0,0"/>
-                <TextBox x:Name="objetoscSpirolaTextBox" HorizontalAlignment="Center" Margin="0,151,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="23" FontSize="11"/>
+                <TextBox x:Name="objetoscSpirolaTextBox" HorizontalAlignment="Center" Margin="0,151,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="23" FontSize="11" IsReadOnly="True"/>
                 <Label x:Name="objetoscNapojuLabel"  Content="Objętość napoju:" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" Margin="0,193,0,0"/>
-                <TextBox x:Name="objetoscNapojuTextBox" HorizontalAlignment="Center" Margin="0,221,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="23" FontSize="11"/>
+                <TextBox x:Name="objetoscNapojuTextBox" HorizontalAlignment="Center" Margin="0,221,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="23" FontSize="11" IsReadOnly="True"/>
             </Grid>
         </GroupBox>
     </Grid>

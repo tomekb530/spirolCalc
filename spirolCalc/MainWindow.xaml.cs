@@ -61,8 +61,19 @@ namespace spirolCalc
 
         private void obliczButton_Click(object sender, RoutedEventArgs e)
         {
-            //napraw
-            objetoscSpirolaTextBox.Text = CalcClass.Calculate(Convert.ToDouble(WielkoscNaczyniaTextBox.Text),Convert.ToDouble(ZawartoscSpirytusuTextBox.Text), Convert.ToDouble(IloscNaczynTextBox.Text)).ToString() + "ml";
+            double size;
+            double abv;
+            double amount;
+            if (Double.TryParse(WielkoscNaczyniaTextBox.Text, out size) && Double.TryParse(ZawartoscSpirytusuTextBox.Text, out abv) && Double.TryParse(IloscNaczynTextBox.Text, out amount))
+            {
+
+                objetoscSpirolaTextBox.Text = Math.Round(CalcClass.Calculate(size, abv, amount) * 100) / 100 + "ml";
+                objetoscNapojuTextBox.Text = Math.Round(amount * size * 100) / 100 + "ml";
+
+            }
+            else {
+                MessageBox.Show("Podano nieprawidłowe dane!");
+            }
         }
     }
 }
