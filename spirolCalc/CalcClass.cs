@@ -21,8 +21,6 @@ namespace spirolCalc
         public string Name { get; set; }
         public double Size { get; set; }
 
-        public List<string> exampleAlcohols { get; set; }
-
         public override string ToString()
         {
             return Name;
@@ -33,6 +31,8 @@ namespace spirolCalc
         public string Name { get; set; }
 
         public double ABV { get; set; }
+
+        public string PrefferedUtensil { get; set; }
 
         public override string ToString()
         {
@@ -53,7 +53,7 @@ namespace spirolCalc
             }
             else
             {
-                throw new FileNotFoundException("File not found");
+                throw new FileNotFoundException("Nie znaleziono presetów, ładuję bez nich!");
             }
             if (datastring != null)
             {
@@ -61,12 +61,21 @@ namespace spirolCalc
             }
             else
             {
-                throw new NullReferenceException("Data is null");
+                throw new NullReferenceException("Plik z presetami jest pusty, ładuję bez nich!");
             }
         }
         public CalcClass()
         {
             this.data = InitFile();
+        }
+
+        public List<Alcohol> GetExampleAlcohols(string name)
+        {
+            return data.Alcohols.Where(x => x.PrefferedUtensil == name).ToList();
+        }
+        public double Calculate(double amount, double ABV, double size)
+        {
+            return (amount * ABV);
         }
     }
 }

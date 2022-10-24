@@ -24,14 +24,22 @@ namespace spirolCalc
         public MainWindow()
         {
             InitializeComponent();
-            calc = new CalcClass();
-            naczyniaPresety.ItemsSource = calc.data.Utensils;
-            spirolePresety.ItemsSource = calc.data.Alcohols;
+            try
+            {
+                calc = new CalcClass();
+                naczyniaPresety.ItemsSource = calc.data.Utensils;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Błąd przy ładowaniu JSON: "+e.Message);
+            }
+
         }
 
         private void naczyniaPresety_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+            Utensil choosen = (Utensil)naczyniaPresety.SelectedItem;
+            spirolePresety.ItemsSource = calc.GetExampleAlcohols(choosen.ToString());
         }
     }
 }
