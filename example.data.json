@@ -1,0 +1,15 @@
+{
+  "Utensils": [
+    {
+      "Name": "Kieliszek",
+      "Size": 30
+    }
+  ],
+  "Alcohols": [
+    {
+      "Name": "Wódka",
+      "ABV": 40,
+      "PrefferedUtensil": "Kieliszek"
+    }
+  ]
+}
