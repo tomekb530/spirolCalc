@@ -24,5 +24,6 @@ namespace spirolCalc
         {
             InitializeComponent();
         }
+
     }
 }
