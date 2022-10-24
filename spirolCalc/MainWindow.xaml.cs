@@ -61,7 +61,8 @@ namespace spirolCalc
 
         private void obliczButton_Click(object sender, RoutedEventArgs e)
         {
-            jakisLabel.Content = calc.Calculate(Convert.ToDouble(WielkoscNaczyniaTextBox.Text),Convert.ToDouble(ZawartoscSpirytusuTextBox.Text), Convert.ToDouble(IloscNaczynTextBox.Text)).ToString() + "ml";
+            //napraw
+            objetoscSpirolaTextBox.Text = CalcClass.Calculate(Convert.ToDouble(WielkoscNaczyniaTextBox.Text),Convert.ToDouble(ZawartoscSpirytusuTextBox.Text), Convert.ToDouble(IloscNaczynTextBox.Text)).ToString() + "ml";
         }
     }
 }
