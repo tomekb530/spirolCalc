@@ -5,33 +5,44 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace spirolCalc
 {
     public class AlcoData 
     {
-        public Utensil[] Utensils { get; set; }
+        public List<Utensil> Utensils { get; set; }
 
-        public Alcohol[] Alcohols { get; set; }
+        public List<Alcohol> Alcohols { get; set; }
     }
     public class Utensil
     {
-        public string Name { get; private set; }
-        public double Size { get; private set; }
+        public string Name { get; set; }
+        public double Size { get; set; }
 
-        public Alcohol[] exampleAlcohols { get; private set; }
+        public List<string> exampleAlcohols { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
 
     }
     public class Alcohol {
-        public string Name { get; private set; }
+        public string Name { get; set; }
 
-        public double ABV { get; private set; }
+        public double ABV { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     };
     public class CalcClass 
     {
-        private object data;
-        private string path = "data.txt";
+        public AlcoData data;
+        private string path = "data.json";
         private string datastring;
         private AlcoData InitFile()
         {
@@ -55,7 +66,7 @@ namespace spirolCalc
         }
         public CalcClass()
         {
-
+            this.data = InitFile();
         }
     }
 }

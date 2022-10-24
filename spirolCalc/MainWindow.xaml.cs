@@ -20,10 +20,18 @@ namespace spirolCalc
     /// </summary>
     public partial class MainWindow : Window
     {
+        public CalcClass calc;
         public MainWindow()
         {
             InitializeComponent();
+            calc = new CalcClass();
+            naczyniaPresety.ItemsSource = calc.data.Utensils;
+            spirolePresety.ItemsSource = calc.data.Alcohols;
         }
 
+        private void naczyniaPresety_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
     }
 }
