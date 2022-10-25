@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using spirolCalc;
+using System.Windows;
 
 namespace REghZyFramework.Themes
 {
@@ -18,6 +19,15 @@ namespace REghZyFramework.Themes
         {
             if (e.Source != null)
                 try { MinimizeWind(Window.GetWindow((FrameworkElement)e.Source)); } catch { }
+        }
+
+        private void aboutOpen(object sender, RoutedEventArgs e)
+        {
+            if (e.Source != null)
+            {
+                About about = new About();
+                about.Show();
+            }
         }
 
         public void CloseWind(Window window) => window.Close();

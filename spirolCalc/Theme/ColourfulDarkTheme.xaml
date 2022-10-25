@@ -4088,7 +4088,8 @@
                                                 FontFamily="Segoe UI"
                                                 FontSize="17"
                                                 VerticalContentAlignment="Bottom"
-                                                WindowChrome.IsHitTestVisibleInChrome="True">
+                                                WindowChrome.IsHitTestVisibleInChrome="True"
+                                                Click="aboutOpen">
                                         </Button>
                                         <Button x:Name="btnMinimize"
                                                 Background="Transparent"
